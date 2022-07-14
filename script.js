@@ -14,7 +14,6 @@ avatarTemplate.innerHTML = `
     </div>
 `;
 
-
 class Avatar extends HTMLElement {
 	constructor() {
 		super();
@@ -70,7 +69,6 @@ class LiveTimer extends HTMLElement {
 	constructor() {
 		super();
 		this.innerHTML = `<time-formatted hour="numeric" minute="numeric" second="numeric"></time-formatted>`;
-		//console.log(this.firstChild.innerHTML);
 	}
 	
 	updateTime() {
@@ -88,7 +86,6 @@ class LiveTimer extends HTMLElement {
 	disconnectedCallback() {
 		clearInterval(this.timer)
 	}
-
 
 }
 
@@ -125,7 +122,6 @@ class WordCount extends HTMLParagraphElement {
 
 	connectedCallback() {
 		this.shadowRoot.querySelector('.countBtn').addEventListener('click', () => this.countWords());
-
 	}
 }
 
