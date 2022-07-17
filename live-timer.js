@@ -54,6 +54,8 @@ class LiveTimer extends HTMLElement {
 	updateTime() {
 		this.date = new Date();
 		this.firstChild.setAttribute('datetime', this.date);
+		const tickEvent = new CustomEvent('tick', { detail: this.date });
+		this.dispatchEvent(tickEvent);
 		
 	}
 
@@ -69,15 +71,5 @@ class LiveTimer extends HTMLElement {
 
 customElements.define("live-timer", LiveTimer);
 
-//trying to get date details 
-const detailsElement = document.querySelector('live-timer').firstChild;
-console.log(detailsElement)
-const tickEvent = new CustomEvent('tick', { detail: document.querySelector('live-timer').firstChild.getAttribute('datetime')});
-document.querySelector('live-timer').dispatchEvent(tickEvent);
-//console.log(tickEvent)
-
-
-function getDetails() {
-	//function to be triggered on tick event
-}
-
+const liveTimer = document.querySelector('live-timer');
+liveTimer.addEventListener('tick', event => console.log(event.detail));
