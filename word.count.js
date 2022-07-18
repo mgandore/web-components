@@ -18,7 +18,7 @@ wordCountTemplate.innerHTML = `
 	<button class='countBtn'>Show word count</button>
     `;
 
-class WordCount extends HTMLParagraphElement {
+class WordCounter extends HTMLParagraphElement {
 	constructor() {
 		super();
 
@@ -36,4 +36,4 @@ class WordCount extends HTMLParagraphElement {
 	}
 }
 
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define('word-counter', WordCounter, { extends: 'p' });

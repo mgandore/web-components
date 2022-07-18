@@ -17,7 +17,7 @@ avatarTemplate.innerHTML = `
     </div>
 `;
 
-class Avatar extends HTMLElement {
+class CustomAvatar extends HTMLElement {
 	constructor() {
 		super();
 
@@ -27,4 +27,4 @@ class Avatar extends HTMLElement {
 	}
 }
 
-customElements.define('custom-avatar', Avatar);
+customElements.define('custom-avatar', CustomAvatar);
