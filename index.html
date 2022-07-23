@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Custom Web Components</title>
+	<script src="custom-avatar.js" defer></script>
+	<script src="live-timer.js" defer></script>
+	<script src="word.count.js" defer></script>
+</head>
+
+<body>
+	<div class="task">
+		<h3>Task 1</h3>
+		<custom-avatar mysrc="https://external-content.duckduckgo.com/iu/?u=https
+			%3A%2F%2Fmoonvillageassociation.org%2Fwp-content%2Fuploads%2F2018%2F06%2F
+			default-profile-picture1.jpg&f=1&nofb=1"></custom-avatar>
+	</div>
+	<br>
+	<div class="task">
+		<h3>Task 2</h3>
+		<div>Static: 
+			<time-formatted id="elem" hour="numeric" minute="numeric" second="numeric"></time-formatted>
+		</div>
+		<div>Dinamic: 
+			<live-timer id="live-elem" hour="numeric" minute="numeric" second="numeric"></live-timer>
+		</div>
+	</div>
+	<br>
+	<div class="task">
+		<h3>Task 3</h3>
+		<p class="myText" is="word-counter">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+	</div>
+</body>
+
+</html>
